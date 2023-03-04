@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap");
+* {
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background: url("../images/pattern-background-mobile.svg") no-repeat, #e0e8ff;
+}
+
+body div.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+}
+
+body div.container div.component-container {
+  background: #ffffff;
+  position: absolute;
+  width: 327px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 30px;
+  color: #717fa6;
+  -webkit-box-shadow: 0 0 19px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 19px rgba(0, 0, 0, 0.2);
+}
+
+body div.container div.component-container header.header {
+  height: 160px;
+  background: url(../images/illustration-hero.svg) no-repeat;
+  background-size: contain;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-bottom: 1.2em;
+}
+
+body div.container div.component-container main.main {
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+body div.container div.component-container main.main h1,
+body div.container div.component-container main.main p,
+body div.container div.component-container main.main div.plan,
+body div.container div.component-container main.main button {
+  margin-bottom: 0.8em;
+}
+
+body div.container div.component-container main.main h1 {
+  color: #1f2e55;
+}
+
+body div.container div.component-container main.main div.plan {
+  display: -ms-grid;
+  display: grid;
+  background: #f7f9ff;
+  -ms-grid-columns: max-content 1fr max-content;
+      grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-columns: max-content 1fr max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7em 1em;
+  border-radius: 15px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body div.container div.component-container main.main div.plan div {
+  margin-left: 1.2em;
+  text-align: left;
+}
+
+body div.container div.component-container main.main button.btn {
+  display: block;
+  width: 100%;
+  padding: 1.2em 1em;
+  border-radius: 10px;
+  background: #382ae1;
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+body div.container div.component-container main.main button.btn.cancel {
+  background: transparent;
+  color: #717fa6;
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    background: url(../images/pattern-background-desktop.svg) no-repeat, #e0e8ff;
+    background-size: contain;
+  }
+  body div.container div.component-container {
+    width: 450px;
+  }
+  body div.container div.component-container header.header {
+    height: 220px;
+    background-size: 100% 100%;
+  }
+  body div.container div.component-container main.main p.sub {
+    padding: 0 2em;
+    font-size: 1.2em;
+  }
+}
+/*# sourceMappingURL=index.css.map */

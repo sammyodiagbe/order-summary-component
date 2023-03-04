@@ -1,12 +1,120 @@
+$background-color: #e0e8ff;
+$less-dark-background: #f7f9ff;
+$white: #ffffff;
+$padding: 1em;
+$call-to-action: #382ae1;
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap");
 
 * {
   padding: 0;
   border: none;
+  margin: 0;
   outline: none;
   box-sizing: border-box;
 }
 body {
   font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
+
+  background: url("../images/pattern-background-mobile.svg") no-repeat,
+    $background-color;
+  div.container {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    div.component-container {
+      background: $white;
+      position: absolute;
+      width: 327px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 30px;
+      color: #717fa6;
+      box-shadow: 0 0 19px rgba(0, 0, 0, 0.2);
+      header.header {
+        height: 160px;
+        background: url(../images/illustration-hero.svg) no-repeat;
+        background-size: contain;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        margin-bottom: 1.2em;
+      }
+
+      main.main {
+        padding: $padding 1.5em;
+        text-align: center;
+        h1,
+        p,
+        div.plan,
+        button {
+          margin-bottom: 0.8em;
+        }
+
+        h1 {
+          color: #1f2e55;
+        }
+        div.plan {
+          display: grid;
+          background: $less-dark-background;
+          grid-template-columns: max-content 1fr max-content;
+          align-items: center;
+          padding: 0.7em $padding;
+          border-radius: 15px;
+          justify-content: space-evenly;
+
+          div {
+            margin-left: 1.2em;
+            text-align: left;
+            p {
+            }
+          }
+        }
+
+        button.btn {
+          display: block;
+          width: 100%;
+          padding: 1.2em $padding;
+          border-radius: 10px;
+          background: $call-to-action;
+          color: $white;
+          font-size: 0.9em;
+          &.cancel {
+            background: transparent;
+            color: #717fa6;
+          }
+        }
+      }
+    }
+  }
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    background: url(../images/pattern-background-desktop.svg) no-repeat,
+      $background-color;
+    background-size: contain;
+
+    div.container {
+      div.component-container {
+        width: 450px;
+        header.header {
+          height: 220px;
+          background-size: 100% 100%;
+        }
+
+        main.main {
+          p.sub {
+            padding: 0 2em;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
 }
